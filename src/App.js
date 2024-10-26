@@ -31,6 +31,7 @@ import { CarouselConT } from "./Context/CarouselContext";
 import UpdateCarouselList from "./Pages/services-carousel/CarouselUPdate";
 import Career from "./Pages/Career/CareerInfo";
 import { JobOpeningContext } from "./Context/JobOpeningContext";
+import AddJobRole from "./Pages/JobRole/addJobRole";
 
 const AppComponent = () => {
   const { isAuthenticated } = useContext(AuthState);
@@ -52,7 +53,7 @@ const AppComponent = () => {
           <Route path="/Careerinfo" element={<Career/>}/>
           <Route path="/AddCareer" element={<AddCareer />} />
           <Route path="/ContactUs" element={<ContactUs/>} />
-         
+         <Route path="/AddjobRole" element={<AddJobRole/>}/>
           <Route path="/AddDepartment" element={<AddDepartment/>} />
           <Route path="/GetDepartment" element={<GetDepartment/>} />
           <Route path="/UpdateDepartment/:id" element={<UpdateDepartment/>} />

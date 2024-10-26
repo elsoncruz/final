@@ -75,11 +75,16 @@ const JobForm = () => {
             setLoad(false)
             notifySuccess()
             setDepID(0)
+            setJobDescriptions('')
+            setWorkModesId(0)
+            setEducation('')
+            setOpenings('')
+            setJobTiming('')
             setEducation('')
             setEmpId(0)
+            setPrimarySkills('')
             setExperience('')
             setImage('')
-            setJob(0)
         }else{
           NetworkErr()
         }
@@ -114,7 +119,7 @@ const JobForm = () => {
     <div className="mx-auto p-6 pt-10 md:m-10 bg-white shadow-2xl rounded-lg">
       <h1 className="text-2xl text-[15px] md:text-[20px] font-bold text-orange-600">New Job</h1>
       {load && <Loader/>}
-      <div className=" grid grid-cols-1 text-[14px] md:text-[16px] md:grid-cols-2 hide overflow-x-hidden overflow-y-scroll h-[500px] gap-6">
+      <div className=" grid grid-cols-1 text-[14px] md:text-[16px] md:grid-cols-2 no-scrollbar overflow-x-hidden overflow-y-scroll h-[500px] gap-6">
         <div className="space-y-4">
           <input
             type="text"
@@ -147,7 +152,7 @@ const JobForm = () => {
           {validate && openings.length ===0? <p className="text-red-500">Openings are required</p>:''}
 
           <input
-            type="text"
+            type="time"
             name="jobTiming"
             placeholder="Job Timing"
             value={jobTiming}

@@ -24,7 +24,7 @@ const menuItems = [
     label: 'Career',
     route: '/allvoices',
     dropdown: [ {id:1, subName: 'Career List', linkPage: '/CareerList'}, {id:2,subName:'Application',linkPage:'/application'},
-      {id:3,subName:'Career-info', linkPage:'/Careerinfo'}
+      {id:3,subName:'Career-info', linkPage:'/Careerinfo'},{id:4,subName:'Add Job Role', linkPage:'/AddjobRole'}
      ]
   },
   {

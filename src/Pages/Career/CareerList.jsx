@@ -14,7 +14,6 @@ import { deleteJobOpening } from "../../Networking/JobDeleteApiAction";
 const JobCard = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('');
-  const [conform, setConform] = useState(false);
   const JobOpeningContext = useContext(JobOpeningsState);
   const [modalWindow, setModalWindow] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
@@ -34,7 +33,7 @@ const JobCard = () => {
       })
       .catch(() => {
         setIsLoading(false);
-        toast.warn('Something went wrong!');
+        toast.warn(`Something went wrong!${err}`);
       });
   }, []);
 
@@ -80,7 +79,7 @@ const JobCard = () => {
 
         <Link to='/AddCareer'>
           <button className='mt-2 md:mt-0 px-4 py-2 uppercase text-xs font-semibold rounded-md bg-orange-400 hover:bg-orange-600 transition duration-300'>
-            Add Voices
+            Add Job opening
           </button>
         </Link>
       </div>
